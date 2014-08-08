@@ -25,6 +25,7 @@ GEM
     eventmachine (1.0.3)
     execjs (2.0.2)
     ffi (1.9.3)
+    ffi (1.9.3-x64-mingw32)
     fssm (0.2.10)
     haml (4.0.5)
       tilt
@@ -122,11 +123,14 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    wdm (0.1.0)
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
+  listen
   middleman (~> 3.3.0)
   middleman-gh-pages
   middleman-livereload (~> 3.3.0)
@@ -135,4 +139,4 @@ DEPENDENCIES
   redcarpet (~> 3.1.1)
   ruby18_source_location
   therubyracer
-  wdm (~> 0.1.0)
+  wdm (>= 0.1.0)

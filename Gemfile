@@ -16,7 +16,11 @@ gem "middleman-livereload", "~> 3.3.0"
 gem 'redcarpet', '~> 3.1.1'
 
 # For faster file watcher updates on Windows:
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+require 'rbconfig'
+
+gem 'listen'
+gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
+# gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 # Cross-templating language block fix for Ruby 1.8
 platforms :mri_18 do
